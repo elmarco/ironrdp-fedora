@@ -1,0 +1,25 @@
+From b8d38f7eaad5a0454fb51b63638273c55891f04f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marc-Andr=C3=A9=20Lureau?= <marcandre.lureau@redhat.com>
+Date: Sat, 23 Nov 2024 09:11:11 +0400
+Subject: [PATCH] rstest-0.23
+
+---
+ Cargo.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Cargo.toml b/Cargo.toml
+index 52715e1..2ebfff5 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -230,7 +230,7 @@ version = "0.3"
+ version = "0.17"
+ 
+ [dev-dependencies.rstest]
+-version = "0.22"
++version = "0.23"
+ 
+ [dev-dependencies.tempfile]
+ version = "3.13"
+-- 
+2.47.0
+
