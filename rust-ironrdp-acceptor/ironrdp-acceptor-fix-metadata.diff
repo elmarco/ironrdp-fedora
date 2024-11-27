@@ -1,0 +1,11 @@
+--- ironrdp-acceptor-0.1.0/Cargo.toml	1970-01-01T00:00:01+00:00
++++ ironrdp-acceptor-0.1.0/Cargo.toml	2024-11-27T19:07:24.909166+00:00
+@@ -46,7 +46,7 @@
+ version = "0.1"
+ 
+ [dependencies.ironrdp-connector]
+-version = "0.1"
++version = "0.2"
+ 
+ [dependencies.ironrdp-core]
+ version = "0.1"
