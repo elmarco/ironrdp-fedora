@@ -1,0 +1,26 @@
+--- x509-cert-0.2.5/Cargo.toml	1970-01-01T00:00:01+00:00
++++ x509-cert-0.2.5/Cargo.toml	2024-11-27T13:16:34.546294+00:00
+@@ -68,12 +68,6 @@
+ version = "0.7.3"
+ features = ["alloc"]
+ 
+-[dependencies.tls_codec]
+-version = "0.4.0"
+-features = ["derive"]
+-optional = true
+-default-features = false
+-
+ [dev-dependencies.ecdsa]
+ version = "0.16.8"
+ features = [
+@@ -125,10 +119,8 @@
+     "der/pem",
+     "spki/pem",
+ ]
+-sct = ["dep:tls_codec"]
+ std = [
+     "const-oid/std",
+     "der/std",
+     "spki/std",
+-    "tls_codec?/std",
+ ]

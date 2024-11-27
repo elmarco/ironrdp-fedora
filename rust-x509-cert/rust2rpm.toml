@@ -1,0 +1,2 @@
+[package]
+summary = "Pure Rust implementation of the X.509 PKI Certificate format from RFC 5280"
