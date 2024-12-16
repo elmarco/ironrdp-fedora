@@ -12,6 +12,10 @@ Summary:        Test data for the picky crates
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/picky-test-data
 Source:         %{crates_source}
+# https://github.com/Devolutions/picky-rs/issues/332
+# the files are either generated manually, or a certificate chain from some other provider to test some edge case
+Source1:        https://github.com/Devolutions/picky-rs/raw/picky-test-data-0.1.0/LICENSE-APACHE
+Source2:        https://github.com/Devolutions/picky-rs/raw/picky-test-data-0.1.0/LICENSE-MIT
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -30,7 +34,8 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-# FIXME: no license files detected
+%license %{crate_instdir}/LICENSE-APACHE
+%license %{crate_instdir}/LICENSE-MIT
 %{crate_instdir}/
 
 %package     -n %{name}+default-devel
@@ -48,6 +53,7 @@ use the "default" feature of the "%{crate}" crate.
 %prep
 %autosetup -n %{crate}-%{version} -p1
 %cargo_prep
+cp -pav %{SOURCE1} %{SOURCE2} .
 
 %generate_buildrequires
 %cargo_generate_buildrequires
