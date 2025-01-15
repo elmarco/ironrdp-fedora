@@ -1,0 +1,8 @@
+[requires]
+build = [
+    "pkgconfig(libusbredirhost) >= 0.13",
+]
+lib = [
+    "pkgconfig(libusbredirhost) >= 0.13",
+]
+
