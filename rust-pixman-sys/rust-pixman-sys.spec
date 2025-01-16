@@ -15,6 +15,7 @@ Source:         %{crates_source}
 Source1:        LICENSE
 
 BuildRequires:  cargo-rpm-macros >= 24
+BuildRequires:  pkgconfig(pixman-1) >= 0.44
 
 %global _description %{expand:
 Pixman is a low-level software library for pixel manipulation, providing
@@ -25,6 +26,7 @@ features such as image compositing and trapezoid rasterization.}
 %package        devel
 Summary:        %{summary}
 BuildArch:      noarch
+Requires:       pkgconfig(pixman-1) >= 0.44
 
 %description    devel %{_description}
 
