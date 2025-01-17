@@ -5,7 +5,7 @@
 %global crate qemu-display
 
 Name:           rust-qemu-display
-Version:        0.1.2
+Version:        0.1.3
 Release:        %autorelease
 Summary:        Helper library to communicate with qemu -display dbus
 
