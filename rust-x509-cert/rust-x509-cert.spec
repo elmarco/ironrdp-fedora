@@ -13,6 +13,8 @@ License:        Apache-2.0 OR MIT
 URL:            https://crates.io/crates/x509-cert
 Source:         %{crates_source}
 # Manually created patch for downstream crate metadata changes
+# * drop unused sct feature / tls_codec dependency
+# * bump rstest dev-dependency from 0.18 to 0.23
 Patch:          x509-cert-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
@@ -38,6 +40,7 @@ use the "%{crate}" crate.
 %doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
+%exclude %{crate_instdir}/tests/examples/
 
 %package     -n %{name}+default-devel
 Summary:        %{summary}

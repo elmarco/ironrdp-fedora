@@ -1,2 +1,10 @@
 [package]
 summary = "Pure Rust implementation of the X.509 PKI Certificate format from RFC 5280"
+cargo-toml-patch-comments = [
+    "drop unused sct feature / tls_codec dependency",
+    "bump rstest dev-dependency from 0.18 to 0.23",
+]
+exclude-crate-files = [
+    "tests/examples/",
+]
+
