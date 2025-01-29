@@ -5,7 +5,7 @@
 %global crate ironrdp-dvc
 
 Name:           rust-ironrdp-dvc
-Version:        0.1.0
+Version:        0.1.2
 Release:        %autorelease
 Summary:        DRDYNVC static channel implementation and traits to implement dynamic virtual channels
 
@@ -32,7 +32,9 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-# FIXME: no license files detected
+%license %{crate_instdir}/LICENSE-APACHE
+%license %{crate_instdir}/LICENSE-MIT
+%doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 

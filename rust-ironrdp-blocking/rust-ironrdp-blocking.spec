@@ -5,7 +5,7 @@
 %global crate ironrdp-blocking
 
 Name:           rust-ironrdp-blocking
-Version:        0.1.0
+Version:        0.3.0
 Release:        %autorelease
 Summary:        Blocking I/O abstraction wrapping the IronRDP state machines conveniently
 
@@ -13,8 +13,6 @@ Summary:        Blocking I/O abstraction wrapping the IronRDP state machines con
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-blocking
 Source:         %{crates_source}
-# Manually created patch for downstream crate metadata changes
-Patch:          ironrdp-blocking-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -34,7 +32,9 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-# FIXME: no license files detected
+%license %{crate_instdir}/LICENSE-APACHE
+%license %{crate_instdir}/LICENSE-MIT
+%doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 

@@ -5,7 +5,7 @@
 %global crate ironrdp-svc
 
 Name:           rust-ironrdp-svc
-Version:        0.1.1
+Version:        0.1.3
 Release:        %autorelease
 Summary:        IronRDP traits to implement RDP static virtual channels
 
@@ -31,7 +31,9 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-# FIXME: no license files detected
+%license %{crate_instdir}/LICENSE-APACHE
+%license %{crate_instdir}/LICENSE-MIT
+%doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 

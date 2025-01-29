@@ -5,7 +5,7 @@
 %global crate ironrdp-server
 
 Name:           rust-ironrdp-server
-Version:        0.2.0
+Version:        0.4.1
 Release:        %autorelease
 Summary:        Extendable skeleton for implementing custom RDP servers
 
@@ -31,7 +31,9 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-# FIXME: no license files detected
+%license %{crate_instdir}/LICENSE-APACHE
+%license %{crate_instdir}/LICENSE-MIT
+%doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 

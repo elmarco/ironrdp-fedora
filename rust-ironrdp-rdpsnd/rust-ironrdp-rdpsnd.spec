@@ -5,7 +5,7 @@
 %global crate ironrdp-rdpsnd
 
 Name:           rust-ironrdp-rdpsnd
-Version:        0.1.0
+Version:        0.2.0
 Release:        %autorelease
 Summary:        RDPSND static channel for audio output implemented as described in MS-RDPEA
 
@@ -32,7 +32,9 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-# FIXME: no license files detected
+%license %{crate_instdir}/LICENSE-APACHE
+%license %{crate_instdir}/LICENSE-MIT
+%doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 

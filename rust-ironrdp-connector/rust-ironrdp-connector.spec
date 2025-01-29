@@ -5,7 +5,7 @@
 %global crate ironrdp-connector
 
 Name:           rust-ironrdp-connector
-Version:        0.2.0
+Version:        0.3.0
 Release:        %autorelease
 Summary:        State machines to drive an RDP connection sequence
 
@@ -13,8 +13,6 @@ Summary:        State machines to drive an RDP connection sequence
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-connector
 Source:         %{crates_source}
-# Manually created patch for downstream crate metadata changes
-Patch:          ironrdp-connector-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -33,7 +31,10 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
+%license %{crate_instdir}/LICENSE-APACHE
+%license %{crate_instdir}/LICENSE-MIT
 %license %{crate_instdir}/src/license_exchange.rs
+%doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 
