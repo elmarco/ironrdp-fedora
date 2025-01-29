@@ -1,0 +1,4 @@
+*.rpm
+*.crate
+*.log
+*-build/
