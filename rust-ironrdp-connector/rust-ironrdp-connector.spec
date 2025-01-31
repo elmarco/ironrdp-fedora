@@ -5,11 +5,10 @@
 %global crate ironrdp-connector
 
 Name:           rust-ironrdp-connector
-Version:        0.3.0
+Version:        0.3.1
 Release:        %autorelease
 Summary:        State machines to drive an RDP connection sequence
 
-# Upstream license specification: MIT/Apache-2.0
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-connector
 Source:         %{crates_source}
