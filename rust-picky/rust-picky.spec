@@ -13,8 +13,6 @@ Summary:        Portable X.509, PKI, JOSE and HTTP signature implementation
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/picky
 Source:         %{crates_source %{crate} %{crate_version}}
-# Manually created patch for downstream crate metadata changes
-Patch:          picky-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
