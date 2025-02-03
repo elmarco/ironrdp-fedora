@@ -13,6 +13,8 @@ Summary:        Portable X.509, PKI, JOSE and HTTP signature implementation
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/picky
 Source:         %{crates_source %{crate} %{crate_version}}
+# Manually created patch for downstream crate metadata changes
+Patch:          picky-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -59,30 +61,6 @@ This package contains library source intended for building other packages which
 use the "chrono_conversion" feature of the "%{crate}" crate.
 
 %files       -n %{name}+chrono_conversion-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+ctl-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+ctl-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "ctl" feature of the "%{crate}" crate.
-
-%files       -n %{name}+ctl-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+ctl_http_fetch-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+ctl_http_fetch-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "ctl_http_fetch" feature of the "%{crate}" crate.
-
-%files       -n %{name}+ctl_http_fetch-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+http_signature-devel
@@ -155,30 +133,6 @@ This package contains library source intended for building other packages which
 use the "pkcs7" feature of the "%{crate}" crate.
 
 %files       -n %{name}+pkcs7-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+putty-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+putty-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "putty" feature of the "%{crate}" crate.
-
-%files       -n %{name}+putty-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+ssh-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+ssh-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "ssh" feature of the "%{crate}" crate.
-
-%files       -n %{name}+ssh-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+time_conversion-devel
