@@ -5,7 +5,7 @@
 %global crate yuvutils-rs
 
 Name:           rust-yuvutils-rs
-Version:        0.7.0
+Version:        0.8.0
 Release:        %autorelease
 Summary:        High performance utilities for YUV format handling and conversion
 
@@ -155,6 +155,18 @@ This package contains library source intended for building other packages which
 use the "rdm" feature of the "%{crate}" crate.
 
 %files       -n %{name}+rdm-devel
+%ghost %{crate_instdir}/Cargo.toml
+
+%package     -n %{name}+rdp-devel
+Summary:        %{summary}
+BuildArch:      noarch
+
+%description -n %{name}+rdp-devel %{_description}
+
+This package contains library source intended for building other packages which
+use the "rdp" feature of the "%{crate}" crate.
+
+%files       -n %{name}+rdp-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+sse-devel
