@@ -1,8 +1,0 @@
-[requires]
-build = [
-    "pkgconfig(pixman-1) >= 0.44",
-]
-lib = [
-    "pkgconfig(pixman-1) >= 0.44",
-]
-
