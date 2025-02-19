@@ -5,7 +5,7 @@
 %global crate yuvutils-rs
 
 Name:           rust-yuvutils-rs
-Version:        0.8.0
+Version:        0.8.1
 Release:        %autorelease
 Summary:        High performance utilities for YUV format handling and conversion
 
