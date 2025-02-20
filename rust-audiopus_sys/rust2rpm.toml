@@ -1,6 +1,11 @@
+[package]
+license-files.exclude = [
+  "opus/COPYING",
+  "opus/LICENSE_PLEASE_READ.txt"
+]
+
 [scripts]
 prep.post = ["rm -rf opus"]
-
 
 [requires]
 build = ["pkgconfig(opus) >= 1.0.0"]

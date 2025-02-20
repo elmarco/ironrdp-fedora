@@ -34,8 +34,6 @@ use the "%{crate}" crate.
 
 %files          devel
 %license %{crate_instdir}/LICENSE.md
-%license %{crate_instdir}/opus/COPYING
-%license %{crate_instdir}/opus/LICENSE_PLEASE_READ.txt
 %doc %{crate_instdir}/CHANGELOG.md
 %doc %{crate_instdir}/CONTRIBUTING.md
 %doc %{crate_instdir}/README.md
