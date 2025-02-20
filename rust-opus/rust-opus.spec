@@ -4,6 +4,9 @@
 
 %global crate opus
 
+# compile and run tests only on supported architectures
+%global supported_arches x86_64 s390x
+
 Name:           rust-opus
 Version:        0.3.0
 Release:        %autorelease
@@ -56,14 +59,18 @@ use the "default" feature of the "%{crate}" crate.
 %cargo_generate_buildrequires
 
 %build
+%ifarch %{supported_arches}
 %cargo_build
+%endif
 
 %install
 %cargo_install
 
 %if %{with check}
+%ifarch %{supported_arches}
 %check
 %cargo_test
+%endif
 %endif
 
 %changelog

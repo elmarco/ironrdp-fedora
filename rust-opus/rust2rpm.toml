@@ -1,0 +1,8 @@
+[package]
+# https://github.com/SpaceManiac/opus-rs/issues/28
+supported-arches = [
+    "x86_64",
+    "s390x",
+]
+
+
