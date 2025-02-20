@@ -5,11 +5,10 @@
 %global crate ironrdp-rdpsnd
 
 Name:           rust-ironrdp-rdpsnd
-Version:        0.2.0
+Version:        0.3.0
 Release:        %autorelease
 Summary:        RDPSND static channel for audio output implemented as described in MS-RDPEA
 
-# Upstream license specification: MIT/Apache-2.0
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-rdpsnd
 Source:         %{crates_source}
