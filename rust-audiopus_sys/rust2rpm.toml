@@ -1,0 +1,8 @@
+[scripts]
+prep.post = ["rm -rf opus"]
+
+
+[requires]
+build = ["pkgconfig(opus) >= 1.0.0"]
+lib = ["pkgconfig(opus) >= 1.0.0"]
+
