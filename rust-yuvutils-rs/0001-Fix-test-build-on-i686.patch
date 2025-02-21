@@ -1,0 +1,30 @@
+From eb2e9a0b82006b98ca4966bf25e0abd918a5e15b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marc-Andr=C3=A9=20Lureau?= <marcandre.lureau@redhat.com>
+Date: Fri, 21 Feb 2025 10:34:15 +0400
+Subject: [PATCH] Fix test build on i686
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Marc-André Lureau <marcandre.lureau@redhat.com>
+---
+ src/built_coefficients.rs | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/built_coefficients.rs b/src/built_coefficients.rs
+index a72546c..fe98e8a 100644
+--- a/src/built_coefficients.rs
++++ b/src/built_coefficients.rs
+@@ -622,6 +622,9 @@ mod tests {
+ 
+     #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
+     fn sqrdml(v: i32, k: i32) -> i32 {
++        #[cfg(target_arch = "x86")]
++        use std::arch::x86::*;
++        #[cfg(target_arch = "x86_64")]
+         use std::arch::x86_64::*;
+         unsafe {
+             _mm_extract_epi16::<0>(_mm_mulhrs_epi16(
+-- 
+2.47.0
+

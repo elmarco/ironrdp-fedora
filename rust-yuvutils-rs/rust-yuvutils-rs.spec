@@ -12,6 +12,8 @@ Summary:        High performance utilities for YUV format handling and conversio
 License:        BSD-3-Clause OR Apache-2.0
 URL:            https://crates.io/crates/yuvutils-rs
 Source:         %{crates_source}
+# * https://github.com/awxkee/yuvutils-rs/pull/71
+Patch1:         0001-Fix-test-build-on-i686.patch
 
 BuildRequires:  cargo-rpm-macros >= 24
 
