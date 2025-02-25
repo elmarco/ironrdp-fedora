@@ -13,7 +13,7 @@ License:        BSD-3-Clause OR Apache-2.0
 URL:            https://crates.io/crates/yuvutils-rs
 Source:         %{crates_source}
 # * https://github.com/awxkee/yuvutils-rs/pull/71
-Patch1:         0001-Fix-test-build-on-i686.patch
+Patch10:        0001-Fix-test-build-on-i686.patch
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -85,18 +85,6 @@ This package contains library source intended for building other packages which
 use the "fast_mode" feature of the "%{crate}" crate.
 
 %files       -n %{name}+fast_mode-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+nightly_avx512-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+nightly_avx512-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "nightly_avx512" feature of the "%{crate}" crate.
-
-%files       -n %{name}+nightly_avx512-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+nightly_f16-devel
