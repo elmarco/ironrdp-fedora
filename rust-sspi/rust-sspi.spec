@@ -54,18 +54,6 @@ use the "default" feature of the "%{crate}" crate.
 %files       -n %{name}+default-devel
 %ghost %{crate_instdir}/Cargo.toml
 
-%package     -n %{name}+aws-lc-rs-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+aws-lc-rs-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "aws-lc-rs" feature of the "%{crate}" crate.
-
-%files       -n %{name}+aws-lc-rs-devel
-%ghost %{crate_instdir}/Cargo.toml
-
 %package     -n %{name}+dns_resolver-devel
 Summary:        %{summary}
 BuildArch:      noarch

@@ -4,4 +4,11 @@ cargo-toml-patch-comments = [
 ]
 
 [features]
-hide = ["scard", "__test-data", "__rustls-used", "__install-crypto-provider"]
+# missing deps or internal
+hide = [
+    "aws-lc-rs",
+    "scard", 
+    "__test-data", 
+    "__rustls-used", 
+    "__install-crypto-provider",
+]
