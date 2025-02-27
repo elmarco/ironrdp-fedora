@@ -15,6 +15,7 @@ Source:         %{crates_source}
 # Automatically generated patch to strip dependencies and normalize metadata
 Patch:          sspi-fix-metadata-auto.diff
 # Manually created patch for downstream crate metadata changes
+# * default to the ring crypto backend
 Patch:          sspi-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
@@ -51,42 +52,6 @@ This package contains library source intended for building other packages which
 use the "default" feature of the "%{crate}" crate.
 
 %files       -n %{name}+default-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+__install-crypto-provider-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+__install-crypto-provider-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "__install-crypto-provider" feature of the "%{crate}" crate.
-
-%files       -n %{name}+__install-crypto-provider-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+__rustls-used-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+__rustls-used-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "__rustls-used" feature of the "%{crate}" crate.
-
-%files       -n %{name}+__rustls-used-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+__test-data-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+__test-data-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "__test-data" feature of the "%{crate}" crate.
-
-%files       -n %{name}+__test-data-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+aws-lc-rs-devel
@@ -135,18 +100,6 @@ This package contains library source intended for building other packages which
 use the "ring" feature of the "%{crate}" crate.
 
 %files       -n %{name}+ring-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+scard-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+scard-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "scard" feature of the "%{crate}" crate.
-
-%files       -n %{name}+scard-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+tsssp-devel

@@ -1,0 +1,7 @@
+[package]
+cargo-toml-patch-comments = [
+    "default to the ring crypto backend",
+]
+
+[features]
+hide = ["scard", "__test-data", "__rustls-used", "__install-crypto-provider"]
