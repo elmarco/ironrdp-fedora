@@ -5,7 +5,7 @@
 %global crate sspi
 
 Name:           rust-sspi
-Version:        0.15.1
+Version:        0.15.2
 Release:        %autorelease
 Summary:        Rust implementation of the Security Support Provider Interface
 
@@ -14,9 +14,8 @@ URL:            https://crates.io/crates/sspi
 Source:         %{crates_source}
 # Automatically generated patch to strip dependencies and normalize metadata
 Patch:          sspi-fix-metadata-auto.diff
-# Manually created patch for downstream crate metadata changes
 # * default to the ring crypto backend
-Patch:          sspi-fix-metadata.diff
+Patch10:        sspi-fix-metadata.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 

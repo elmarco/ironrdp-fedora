@@ -1,6 +1,6 @@
 [package]
-cargo-toml-patch-comments = [
-    "default to the ring crypto backend",
+extra-patches = [
+  { number = 10, file = "sspi-fix-metadata.diff", comments = ["default to the ring crypto backend"] },
 ]
 
 [features]
