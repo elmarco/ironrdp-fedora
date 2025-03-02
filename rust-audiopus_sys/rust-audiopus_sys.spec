@@ -51,18 +51,6 @@ use the "default" feature of the "%{crate}" crate.
 %files       -n %{name}+default-devel
 %ghost %{crate_instdir}/Cargo.toml
 
-%package     -n %{name}+bindgen-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+bindgen-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "bindgen" feature of the "%{crate}" crate.
-
-%files       -n %{name}+bindgen-devel
-%ghost %{crate_instdir}/Cargo.toml
-
 %package     -n %{name}+dynamic-devel
 Summary:        %{summary}
 BuildArch:      noarch
@@ -73,18 +61,6 @@ This package contains library source intended for building other packages which
 use the "dynamic" feature of the "%{crate}" crate.
 
 %files       -n %{name}+dynamic-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+generate_binding-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+generate_binding-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "generate_binding" feature of the "%{crate}" crate.
-
-%files       -n %{name}+generate_binding-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+static-devel
