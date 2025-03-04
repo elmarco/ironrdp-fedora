@@ -54,6 +54,30 @@ use the "default" feature of the "%{crate}" crate.
 %files       -n %{name}+default-devel
 %ghost %{crate_instdir}/Cargo.toml
 
+%package     -n %{name}+__install-crypto-provider-devel
+Summary:        %{summary}
+BuildArch:      noarch
+
+%description -n %{name}+__install-crypto-provider-devel %{_description}
+
+This package contains library source intended for building other packages which
+use the "__install-crypto-provider" feature of the "%{crate}" crate.
+
+%files       -n %{name}+__install-crypto-provider-devel
+%ghost %{crate_instdir}/Cargo.toml
+
+%package     -n %{name}+__rustls-used-devel
+Summary:        %{summary}
+BuildArch:      noarch
+
+%description -n %{name}+__rustls-used-devel %{_description}
+
+This package contains library source intended for building other packages which
+use the "__rustls-used" feature of the "%{crate}" crate.
+
+%files       -n %{name}+__rustls-used-devel
+%ghost %{crate_instdir}/Cargo.toml
+
 %package     -n %{name}+dns_resolver-devel
 Summary:        %{summary}
 BuildArch:      noarch

@@ -1,5 +1,5 @@
 --- sspi-0.15.2/Cargo.toml	1970-01-01T00:00:01+00:00
-+++ sspi-0.15.2/Cargo.toml	2025-03-04T06:34:50.003633+00:00
++++ sspi-0.15.2/Cargo.toml	2025-03-04T13:41:47.390824+00:00
 @@ -41,7 +41,7 @@
      "rustls?/aws-lc-rs",
      "__install-crypto-provider",

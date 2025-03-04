@@ -8,6 +8,4 @@ hide = [
     "aws-lc-rs",
     "scard", 
     "__test-data", 
-    "__rustls-used", 
-    "__install-crypto-provider",
 ]
