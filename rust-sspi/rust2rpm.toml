@@ -1,7 +1,6 @@
 [package]
-extra-patches = [
-  { number = 10, file = "sspi-fix-metadata.diff", comments = ["default to the ring crypto backend"] },
-]
+# --reuse-patch
+cargo-toml-patch-comments = ["default to the ring crypto backend"]
 
 [features]
 # missing deps or internal
