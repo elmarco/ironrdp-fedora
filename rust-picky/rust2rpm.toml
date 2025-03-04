@@ -1,2 +1,0 @@
-[features]
-hide = ["ctl", "ctl_http_fetch", "putty", "ssh"]

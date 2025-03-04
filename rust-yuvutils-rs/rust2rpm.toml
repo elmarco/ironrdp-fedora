@@ -1,8 +1,0 @@
-[package]
-extra-patches = [
-  { number = 10, file = "0001-Fix-test-build-on-i686.patch", comments = ["https://github.com/awxkee/yuvutils-rs/pull/71"] }
-]
-
-[features]
-# requires fast_transpose
-hide = ["geometry", "nightly_avx512"]
