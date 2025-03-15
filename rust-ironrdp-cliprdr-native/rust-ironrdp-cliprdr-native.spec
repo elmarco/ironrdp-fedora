@@ -5,11 +5,10 @@
 %global crate ironrdp-cliprdr-native
 
 Name:           rust-ironrdp-cliprdr-native
-Version:        0.1.2
+Version:        0.2.0
 Release:        %autorelease
 Summary:        Native CLIPRDR static channel backend implementations for IronRDP
 
-# Upstream license specification: MIT/Apache-2.0
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-cliprdr-native
 Source:         %{crates_source}

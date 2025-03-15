@@ -5,11 +5,10 @@
 %global crate ironrdp-tokio
 
 Name:           rust-ironrdp-tokio
-Version:        0.2.2
+Version:        0.3.0
 Release:        %autorelease
 Summary:        Framed* traits implementation above Tokio’s traits
 
-# Upstream license specification: MIT/Apache-2.0
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-tokio
 Source:         %{crates_source}

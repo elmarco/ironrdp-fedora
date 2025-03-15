@@ -5,11 +5,10 @@
 %global crate ironrdp-acceptor
 
 Name:           rust-ironrdp-acceptor
-Version:        0.3.0
+Version:        0.4.0
 Release:        %autorelease
 Summary:        State machines to drive an RDP connection acceptance sequence
 
-# Upstream license specification: MIT/Apache-2.0
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-acceptor
 Source:         %{crates_source}

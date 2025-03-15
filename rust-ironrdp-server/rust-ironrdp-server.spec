@@ -5,11 +5,10 @@
 %global crate ironrdp-server
 
 Name:           rust-ironrdp-server
-Version:        0.4.1
+Version:        0.5.0
 Release:        %autorelease
 Summary:        Extendable skeleton for implementing custom RDP servers
 
-# Upstream license specification: MIT/Apache-2.0
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/ironrdp-server
 Source:         %{crates_source}
