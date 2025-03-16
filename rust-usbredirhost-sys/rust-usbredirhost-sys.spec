@@ -14,7 +14,7 @@ URL:            https://crates.io/crates/usbredirhost-sys
 Source:         %{crates_source}
 
 BuildRequires:  cargo-rpm-macros >= 24
-BuildRequires:  pkgconfig(usbredirhost) >= 0.15
+BuildRequires:  pkgconfig(libusbredirhost) >= 0.15
 
 %global _description %{expand:
 FFI bindings for usbredirhost.}
@@ -24,7 +24,7 @@ FFI bindings for usbredirhost.}
 %package        devel
 Summary:        %{summary}
 BuildArch:      noarch
-Requires:       pkgconfig(usbredirhost) >= 0.15
+Requires:       pkgconfig(libusbredirhost) >= 0.15
 
 %description    devel %{_description}
 
