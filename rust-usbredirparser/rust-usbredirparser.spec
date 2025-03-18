@@ -5,7 +5,7 @@
 %global crate usbredirparser
 
 Name:           rust-usbredirparser
-Version:        0.4.0
+Version:        0.4.1
 Release:        %autorelease
 Summary:        Bindings for usbredirparser
 
