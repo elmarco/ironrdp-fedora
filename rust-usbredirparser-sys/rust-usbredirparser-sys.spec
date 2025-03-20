@@ -13,6 +13,8 @@ License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/usbredirparser-sys
 Source:         %{crates_source}
 
+ExcludeArch:    i686
+
 BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  pkgconfig(libusbredirparser-0.5) >= 0.13
 

@@ -13,6 +13,8 @@ License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/usbredirparser
 Source:         %{crates_source}
 
+ExcludeArch:    i686
+
 BuildRequires:  cargo-rpm-macros >= 24
 
 %global _description %{expand:
