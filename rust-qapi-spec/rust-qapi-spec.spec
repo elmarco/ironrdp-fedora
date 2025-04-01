@@ -2,23 +2,23 @@
 %bcond check 1
 %global debug_package %{nil}
 
-%global crate usbredirparser
+%global crate qapi-spec
 
-Name:           rust-usbredirparser
-Version:        0.4.1
+Name:           rust-qapi-spec
+Version:        0.3.2
 Release:        %autorelease
-Summary:        Bindings for usbredirparser
+Summary:        QEMU QAPI common types
 
-License:        MIT OR Apache-2.0
-URL:            https://crates.io/crates/usbredirparser
+License:        MIT
+URL:            https://crates.io/crates/qapi-spec
 Source:         %{crates_source}
-
-ExcludeArch:    i686
+# https://github.com/arcnmx/qapi-rs/pull/26
+Source1:        https://github.com/arcnmx/qapi-rs/raw/COPYING
 
 BuildRequires:  cargo-rpm-macros >= 24
 
 %global _description %{expand:
-Bindings for usbredirparser.}
+QEMU QAPI common types.}
 
 %description %{_description}
 
@@ -32,8 +32,8 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-%license %{crate_instdir}/LICENSE-APACHE
-%license %{crate_instdir}/LICENSE-MIT
+%license %{crate_instdir}/COPYING
+%doc %{crate_instdir}/README.md
 %{crate_instdir}/
 
 %package     -n %{name}+default-devel
@@ -50,6 +50,7 @@ use the "default" feature of the "%{crate}" crate.
 
 %prep
 %autosetup -n %{crate}-%{version} -p1
+cp -pav %{SOURCE1} .
 %cargo_prep
 
 %generate_buildrequires
