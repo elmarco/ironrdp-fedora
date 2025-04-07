@@ -14,7 +14,7 @@ URL:            https://crates.io/crates/qapi
 Source:         %{crates_source}
 
 # https://github.com/arcnmx/qapi-rs/pull/26
-Source1:        https://github.com/arcnmx/qapi-rs/raw/COPYING
+Source1:        https://raw.githubusercontent.com/arcnmx/qapi-rs/refs/heads/main/COPYING
 
 BuildRequires:  cargo-rpm-macros >= 24
 
