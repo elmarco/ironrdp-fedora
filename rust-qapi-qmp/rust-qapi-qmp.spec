@@ -9,11 +9,12 @@ Version:        0.15.0
 Release:        %autorelease
 Summary:        QEMU Machine Protocol types
 
-License:        MIT
+# https://github.com/arcnmx/qapi-rs/pull/26
+License:        MIT AND GPL-2.0-or-later
 URL:            https://crates.io/crates/qapi-qmp
 Source:         %{crates_source}
-# https://github.com/arcnmx/qapi-rs/pull/26
 Source1:        https://raw.githubusercontent.com/arcnmx/qapi-rs/refs/heads/main/COPYING
+Source2:        COPYING.GPLv2
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -33,6 +34,7 @@ use the "%{crate}" crate.
 
 %files          devel
 %license %{crate_instdir}/COPYING
+%license %{crate_instdir}/COPYING.GPLv2
 %doc %{crate_instdir}/README.md
 %{crate_instdir}/
 
@@ -51,6 +53,7 @@ use the "default" feature of the "%{crate}" crate.
 %prep
 %autosetup -n %{crate}-%{version} -p1
 cp -pav %{SOURCE1} .
+cp -pav %{SOURCE2} .
 %cargo_prep
 
 %generate_buildrequires
