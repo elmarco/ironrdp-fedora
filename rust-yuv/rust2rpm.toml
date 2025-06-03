@@ -1,0 +1,3 @@
+[features]
+# requires fast_transpose
+hide = ["geometry", "nightly_avx512"]
