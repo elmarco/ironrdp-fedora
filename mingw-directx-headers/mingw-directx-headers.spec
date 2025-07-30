@@ -9,8 +9,8 @@ Release:       1%{?dist}
 Summary:       Official DirectX headers available under an open source license
 
 License:       MIT
-URL:           https://github.com/%{realname}/%{realname}
-Source0:       https://github.com/%{realname}/%{realname}/archive/v%{version}/%{realname}-%{version}.tar.gz
+URL:           https://github.com/microsoft/%{realname}
+Source0:       https://github.com/microsoft/%{realname}/archive/v%{version}/%{realname}-%{version}.tar.gz
 
 BuildArch:     noarch
 
