@@ -1,3 +1,5 @@
+%{?mingw_package_header}
+
 Summary: Utilities to generate, maintain and access the AppStream database
 Name:    mingw-appstream
 Version: 1.0.5
@@ -12,6 +14,7 @@ Source0: https://www.freedesktop.org/software/appstream/releases/AppStream-%{ver
 Patch0001: 0001-meson-don-t-override-appstreamcli-when-cross-buildin.patch
 Patch0002: 0001-Lower-native-appstream-requirement-for-now.patch
 
+BuildArch: noarch
 BuildRequires: meson >= 0.62
 BuildRequires: git-core
 BuildRequires: appstream-devel
@@ -68,6 +71,7 @@ BuildArch: noarch
 
 %{?mingw_debug_package}
 
+
 %prep
 %autosetup -n AppStream-%{version} -S git_am
 
@@ -97,6 +101,7 @@ BuildArch: noarch
 %{mingw32_libdir}/pkgconfig/appstream.pc
 %{mingw32_datadir}/metainfo/org.freedesktop.appstream.cli.*.xml
 %{mingw32_includedir}/appstream/
+%{mingw32_datadir}/appstream/appstream.conf
 %{mingw32_datadir}/gettext/its/metainfo.*
 %{mingw32_datadir}/installed-tests/appstream/metainfo-validate.test
 
@@ -109,8 +114,10 @@ BuildArch: noarch
 %{mingw64_libdir}/pkgconfig/appstream.pc
 %{mingw64_datadir}/metainfo/org.freedesktop.appstream.cli.*.xml
 %{mingw64_includedir}/appstream/
+%{mingw64_datadir}/appstream/appstream.conf
 %{mingw64_datadir}/gettext/its/metainfo.*
 %{mingw64_datadir}/installed-tests/appstream/metainfo-validate.test
+
 
 %changelog
 * Wed Jul 30 2025 Marc-André Lureau <marcandre.lureau@redhat.com> - 1.0.5-1
