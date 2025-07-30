@@ -1,5 +1,5 @@
 Summary: Utilities to generate, maintain and access the AppStream database
-Name:    appstream
+Name:    mingw-appstream
 Version: 1.0.5
 Release: 1%{?dist}
 
