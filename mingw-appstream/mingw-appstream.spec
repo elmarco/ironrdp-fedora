@@ -84,8 +84,7 @@ BuildArch: noarch
 %files -n mingw32-appstream -f mingw32-%{name}.lang
 %license COPYING
 %{mingw32_bindir}/appstreamcli.exe
-%{mingw32_bindir}/libappstream-4.dll
-%{mingw32_sysconfdir}/appstream.conf
+%{mingw32_bindir}/libappstream-5.dll
 %{mingw32_mandir}/man1/appstreamcli.1*
 %{mingw32_libdir}/libappstream.dll.a
 %{mingw32_libdir}/pkgconfig/appstream.pc
@@ -97,8 +96,7 @@ BuildArch: noarch
 %files -n mingw64-appstream -f mingw64-%{name}.lang
 %license COPYING
 %{mingw64_bindir}/appstreamcli.exe
-%{mingw64_bindir}/libappstream-4.dll
-%{mingw64_sysconfdir}/appstream.conf
+%{mingw64_bindir}/libappstream-5.dll
 %{mingw64_mandir}/man1/appstreamcli.1*
 %{mingw64_libdir}/libappstream.dll.a
 %{mingw64_libdir}/pkgconfig/appstream.pc
