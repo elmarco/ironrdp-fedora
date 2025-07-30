@@ -33,7 +33,7 @@ This package contains library source intended for building other packages which
 use the "%{crate}" crate.
 
 %files          devel
-%license %{crate_instdir}/LICENSE
+# https://github.com/danielhenrymantilla/visibility.rs/commit/35326d6b832a69d13dfa847bd85a694189d07007
 %license %{crate_instdir}/LICENSE-APACHE
 %license %{crate_instdir}/LICENSE-MIT
 %license %{crate_instdir}/LICENSE-ZLIB
