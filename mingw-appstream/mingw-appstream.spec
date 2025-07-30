@@ -12,6 +12,7 @@ Source0: https://www.freedesktop.org/software/appstream/releases/AppStream-%{ver
 Patch0001: 0001-meson-don-t-override-appstreamcli-when-cross-buildin.patch
 
 BuildRequires: meson >= 0.62
+BuildRequires: git-core
 BuildRequires: appstream-devel
 
 BuildRequires: mingw32-filesystem >= 95
