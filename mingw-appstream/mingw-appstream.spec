@@ -10,10 +10,17 @@ URL:     https://github.com/ximion/appstream
 Source0: https://www.freedesktop.org/software/appstream/releases/AppStream-%{version}.tar.xz
 
 Patch0001: 0001-meson-don-t-override-appstreamcli-when-cross-buildin.patch
+Patch0002: 0001-Lower-native-appstream-requirement-for-now.patch
 
 BuildRequires: meson >= 0.62
 BuildRequires: git-core
 BuildRequires: appstream-devel
+BuildRequires: gperf
+BuildRequires: gettext
+BuildRequires: intltool
+BuildRequires: itstool
+BuildRequires: xmlto
+BuildRequires: libxslt
 
 BuildRequires: mingw32-filesystem >= 95
 BuildRequires: mingw32-gcc-c++
